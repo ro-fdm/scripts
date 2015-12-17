@@ -1,0 +1,40 @@
+
+
+def manipulate_text_file(id)
+  #string = "idea_" + "#{id}" +"_body_editor"
+  log = File.open('/home/ideas4all/Documentos/production.log.3.txt').grep(/idea_#{id}_body_editor/)
+puts id.inspect
+  puts log.class
+  puts log
+  #l = log.chars.map{|h| h.upcase} => ["idea_101276_body_editor"]
+  #puts l
+  #log2 = log[0].split("Parameters: ")
+  #log_hash = 
+  #pus log_hash
+  #puts log_hash.keys
+
+
+end
+print "dame el id de la idea/n"
+id = gets.chomp
+manipulate_text_file(id)
+=begin
+  usuarios.each do |row1|
+    last_name  = row1[position_last_name].downcase.gsub(/á/, 'a').gsub(/é/, 'e').gsub(/í/, 'i').gsub(/ó/, 'o').gsub(/ú/, 'u').split
+    first_name = row1[position_first_name].downcase.gsub(/á/, 'a').gsub(/é/, 'e').gsub(/í/, 'i').gsub(/ó/, 'o').gsub(/ú/, 'u').split
+    login_name = first_name[0].to_s + "." + last_name[0].to_s
+    row1 << login_name
+  end
+
+  CSV.open('/home/ideas4all/Documentos/probando1.csv', 'w') do |csv_object|
+    usuarios.each do |row_array|
+      csv_object << row_array
+    end
+    puts "finalizado proceso"
+  end
+  usuarios_finales = CSV.read('/home/ideas4all/Documentos/probando1.csv')
+  puts usuarios_finales.inspect
+end
+
+manipulate_csv(1,2)
+=end
